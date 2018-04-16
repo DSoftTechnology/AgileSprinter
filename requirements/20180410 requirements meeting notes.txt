@@ -1,0 +1,91 @@
+Existing stuff to keep
+
+Userstories
+	- Form is pretty good
+	- Do something usefull with priority
+	- should we allow to span sprints (TBD)
+	- Assign to Task Lead (responsible for the summary) ??
+	- Should userstory capture more details ?? (design / requirements block) ??
+	- Show quick summary of tasks (title / hours) ??
+	- add dependencies (wihtin project)
+	- tag (enh / bug / ??)
+	- max hours / LOE
+
+Tasks
+	- Form is pretty good
+	- Autogrow notes field
+	- spellcheck on notes
+	- Notes will be split up in blocks, each with their timestamp. Allow edit of previous notes, including the date.
+	- How to summarize notes into usefull block for status reports??? Require summary when close userstory??
+	- If a tasks roadblocks the entire userstory, it should be visible for all tasks.
+	- Add dependencies (only within userstory)
+
+TaskHistory
+	- Task History needs to be tied to a user in case task gets reassigned
+
+Milestone
+	- Project / Title / due date / start date / Risks (text / required) / Notes (text)
+	- checkbox list of deliverables
+	- will contain userstories
+	- assign to TL
+
+Project
+	- add category (comm / fed / state / local)
+
+Sprints
+	- OK
+
+Recurring functionality
+	- simple flag or different types (e.g. meeting / phone call / IT stuff / general maintenance)
+	- don't get automatically copied over.
+
+Notifications
+	- Notity TL when all tasks are finished so he/she knows to close out (write summary
+
+
+?? Even if userstory isn't finished, we still need a summary at the end of the sprint. How to resolve that???
+
+!! Recycle bin instead of hard delete
+
+SCREENS
+-------
+
+My sprint
+	- show hours for each userstory
+	- visually organize per project / userstory
+	- no more userstory color
+	- drag & drop
+	- filters:
+		- project (def: all)
+		- userstory (def: all)
+		- priority (def: all)
+		- sprint (default to current)
+		- user (default to self)
+	- keep hover
+	- set remaining to zero for completed / obe / next sprint
+	- keep burndown / hours
+
+Project sprint 
+	- merge with my sprint
+
+Sprint overview
+	- good as is
+
+Milestone overview
+	- TBD
+
+Sprint planning
+	- group by milestone (show & order by due dates)
+	- product backlog -> show all, different background color for current sprint
+		- filter by: anything userstory / project field
+		- show start /end dates for sprints
+
+Milestone planning
+	TBD - new screen
+
+Resource planning
+	TBD - new screen
+
+
+
+	
