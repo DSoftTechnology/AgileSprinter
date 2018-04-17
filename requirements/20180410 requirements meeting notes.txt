@@ -10,6 +10,7 @@ Userstories
 	- add dependencies (wihtin project)
 	- tag (enh / bug / ??)
 	- max hours / LOE
+	- keep track how many times it has been moved over (Keep reference to previous ?)
 
 Tasks
 	- Form is pretty good
@@ -17,7 +18,9 @@ Tasks
 	- spellcheck on notes
 	- Notes will be split up in blocks, each with their timestamp. Allow edit of previous notes, including the date.
 	- How to summarize notes into usefull block for status reports??? Require summary when close userstory??
-	- If a tasks roadblocks the entire userstory, it should be visible for all tasks.
+
+
+- If a tasks roadblocks the entire userstory, it should be visible for all tasks.
 	- Add dependencies (only within userstory)
 
 TaskHistory
@@ -35,12 +38,15 @@ Project
 Sprints
 	- OK
 
+
+
 Recurring functionality
 	- simple flag or different types (e.g. meeting / phone call / IT stuff / general maintenance)
 	- don't get automatically copied over.
 
 Notifications
-	- Notity TL when all tasks are finished so he/she knows to close out (write summary
+
+- Notity TL when all tasks are finished so he/she knows to close out (write summary
 
 
 ?? Even if userstory isn't finished, we still need a summary at the end of the sprint. How to resolve that???
@@ -49,11 +55,13 @@ Notifications
 
 SCREENS
 -------
+All
+	- color code userstory without tasks, tasks that are unassigned - separate screen? toast notification? who sees it?
 
 My sprint
 	- show hours for each userstory
 	- visually organize per project / userstory
-	- no more userstory color
+ 	- no more userstory color
 	- drag & drop
 	- filters:
 		- project (def: all)
@@ -85,7 +93,26 @@ Milestone planning
 
 Resource planning
 	TBD - new screen
+	
+Sprint OVerview
+	- Same tabular view as on my/project sprint (row per project)
+	- Be able to see userstory tasks (as popup / inline details) (just summary: status / title / assigned to)
+	- Close button instead of close column (no consensus - TBD)
+	- filter by project
 
+Metrics
+	- Leave as is
+	- Other metrics needed ?
+	
+Status Reports
+	- Add free time range in addtion to the sprint range
+	- correlate time range to the notes time field
+	- Somehow incorporate the userstory summary on this page / let user pick what to show ?
+	- Customize report format (ActiveReports / Devexpress / Telerik?)
 
+Different types of users
+	- Be able to grant read access to clients (which screens / data should they see / permission levels / groups)
 
+Nice to have
+	- autorefresh (interval?)
 	
