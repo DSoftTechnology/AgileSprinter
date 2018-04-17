@@ -1,0 +1,8 @@
+github -> pull requests 
+	- should trigger a build to see if unittests pass -> 
+	- fortify passes ?
+	- code style?
+	- automated UI test (cucumber)
+OK -> merge into test branch -> trigger another build -> deploy to azure test
+integration tests (manual) -> pull request
+OK -> merge into prod / master branch -> trigger to deploy to azure prod
