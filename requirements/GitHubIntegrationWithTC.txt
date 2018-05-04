@@ -1,0 +1,16 @@
+TeamCity Integration w/ GitHub
+
+How it works:
+1. Create a branch of master repo
+2. Make changes to code
+3. Create a Pull Request
+4. TeamCity detects the request, builds and runs tests
+5. TeamCity clears or denies the request for merge
+6. Merge the code back into the master repo
+
+Integrating TeamCity only requires configuring the Branch Spec under VCS root. Instructions in link below:
+(Source - https://blog.jetbrains.com/teamcity/2013/02/automatically-building-pull-requests-from-github-with-teamcity/)
+
+A plugin for TeamCity allows various ways of notifications (i.e. email, tray icon, etc)
+Instructions for installation in the link above
+These features work with TeamCity versions 7.1.3+
