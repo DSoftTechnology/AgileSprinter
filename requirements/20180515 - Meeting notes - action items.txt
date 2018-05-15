@@ -1,0 +1,18 @@
+New build agent need for fortify: Install the agent.msi on the current fortify machine.
+
+
+New actions:
+	- Configure teamcity to run CodeAnalysis / StyleCop (Michael)
+	- Configure teamcity for pull requests (Tara)
+	- Install buildagent on HV-SCAN (Tim)
+	- Add fortify build step (Andrea)
+	- Write a cucumber test for the dummy website. Need to add a unittest project to VS Solutions (Rodney)
+	- Authentication with .net core (using O365 / facebook / google accounts) (Chelly)
+	- Share azure account with a team (Stephen)
+
+Future:
+ - Azure deployment slots
+ - Wireframes / database design
+ - EF Migrations / Code First
+
+	
