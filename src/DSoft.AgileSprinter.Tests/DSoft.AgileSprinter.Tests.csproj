@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DSoft.AgileSprinter.Data\DSoft.AgileSprinter.Data.csproj" />
     <ProjectReference Include="..\DSoft.AgileSprinter.Web\DSoft.AgileSprinter.Web.csproj" />
   </ItemGroup>
 
