@@ -1,0 +1,81 @@
+﻿@model DSoft.AgileSprinter.Data.Models.ElmahError
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ElmahError</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Application)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Application)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Host)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Host)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StatusCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeUtc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TimeUtc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sequence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sequence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AllXml)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AllXml)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ErrorId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

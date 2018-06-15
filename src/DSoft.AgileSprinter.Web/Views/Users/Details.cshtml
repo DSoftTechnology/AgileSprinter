@@ -1,0 +1,54 @@
+﻿@model DSoft.AgileSprinter.Data.Models.Users
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameWithDomain)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NameWithDomain)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FriendlyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FriendlyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Initials)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Initials)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdsyncLastUpdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdsyncLastUpdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdsyncStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdsyncStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Name">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

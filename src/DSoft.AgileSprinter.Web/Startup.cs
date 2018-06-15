@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using DSoft.AgileSprinter.Web.Services;
 using DSoft.AgileSprinter.Data;
 using DSoft.AgileSprinter.Data.Models;
+using DSoft.AgileSprinter.Web.Models;
 
 namespace DSoft.AgileSprinter.Web
 {
@@ -28,6 +29,8 @@ namespace DSoft.AgileSprinter.Web
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<DSoft_AgileSprinterContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DSoftAgileSprinter")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

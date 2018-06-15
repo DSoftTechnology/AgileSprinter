@@ -1,0 +1,79 @@
+﻿@model DSoft.AgileSprinter.Data.Models.TaskHistories
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>TaskHistories</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TaskId" class="control-label"></label>
+                <select asp-for="TaskId" class="form-control" asp-items="ViewBag.TaskId"></select>
+                <span asp-validation-for="TaskId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserStoryId" class="control-label"></label>
+                <select asp-for="UserStoryId" class="form-control" asp-items="ViewBag.UserStoryId"></select>
+                <span asp-validation-for="UserStoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimated" class="control-label"></label>
+                <input asp-for="Estimated" class="form-control" />
+                <span asp-validation-for="Estimated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actual" class="control-label"></label>
+                <input asp-for="Actual" class="form-control" />
+                <span asp-validation-for="Actual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remaining" class="control-label"></label>
+                <input asp-for="Remaining" class="form-control" />
+                <span asp-validation-for="Remaining" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignedTo" class="control-label"></label>
+                <input asp-for="AssignedTo" class="form-control" />
+                <span asp-validation-for="AssignedTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateChanged" class="control-label"></label>
+                <input asp-for="DateChanged" class="form-control" />
+                <span asp-validation-for="DateChanged" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
