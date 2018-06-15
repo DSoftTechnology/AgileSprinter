@@ -12,21 +12,28 @@ namespace DSoft.AgileSprinter.Unit.Tests.features
     public class TestWebLinksSteps
     {
         private IWebDriver driver;
-        private string[] arrUriList;
-        private int testCount;
+        private static string[] arrUriList;
+        private static int testCount;
 
         private const int NUM_LINKS = 3;
         private const string URL_CONTROLLER_VIEW = "https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x";
         private const string URL_USER_SECRETS = "https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows";
         private const string URL_LOGGING = "https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-2.1&tabs=aspnetcore2x";
 
-        public TestWebLinksSteps()
+        [BeforeFeature]
+        public static void InitializeData()
         {
             testCount = 0;
             arrUriList = new string[NUM_LINKS];
             arrUriList[0] = URL_CONTROLLER_VIEW;
             arrUriList[1] = URL_USER_SECRETS;
             arrUriList[2] = URL_LOGGING;
+        }
+
+        [AfterScenario]
+        public static void updateCount()
+        {
+            testCount++;
         }
 
         [Given(@"The splash page is loaded")]
