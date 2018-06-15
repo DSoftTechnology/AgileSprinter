@@ -27,18 +27,42 @@ namespace DSoft.AgileSprinter.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            //Add database context
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<DSoft_AgileSprinterContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DSoftAgileSprinter")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+            //Change default password requirements. Might want to modify later
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequiredLength = 6; //IF YOU CHANGE THIS, YOU MUST CHANGE IT ON THE REGISTRATION PAGES ATTRIBUTES
+            });
+
+            services.AddAuthentication()
+                .AddGoogle(googleOptions =>
+                {
+                    googleOptions.ClientId = Configuration.GetSection("Authentication")["GoogleClientID"];
+                    googleOptions.ClientSecret = Configuration.GetSection("Authentication")["GoogleSecretID"];
+                })
+                .AddFacebook(facebookOptions =>
+                {
+                    facebookOptions.AppId = Configuration.GetSection("Authentication")["FacebookAppID"];
+                    facebookOptions.AppSecret = Configuration.GetSection("Authentication")["FacebookSecretID"];
+                })
+                .AddMicrosoftAccount(microsoftOptions =>
+                {
+                    microsoftOptions.ClientId = Configuration.GetSection("Authentication")["MicrosoftAppID"];
+                    microsoftOptions.ClientSecret = Configuration.GetSection("Authentication")["MicrosoftSecretID"];
+                });
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
             services.AddMvc();
         }
 

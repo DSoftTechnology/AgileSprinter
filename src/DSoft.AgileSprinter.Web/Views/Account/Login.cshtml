@@ -71,7 +71,8 @@
                             <p>
                                 @foreach (var provider in loginProviders)
                                 {
-                                    <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.Name</button>
+                                    //The class name works for google, but might need to be altered for others
+                                    <button type="submit" class="btn btn-block btn-social btn-@provider.Name.ToLower()" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"><span class="fa fa-@(provider.Name.ToLower() == "microsoft" ? "windows" : provider.Name.ToLower())"></span>Sign in with @provider.Name</button>
                                 }
                             </p>
                         </div>
@@ -84,4 +85,23 @@
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '224670884979446',
+                cookie: true,
+                xfbml: true,
+                version: '3.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return ;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 }
