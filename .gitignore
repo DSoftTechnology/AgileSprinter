@@ -288,4 +288,4 @@ __pycache__/
 *.xsd.cs
 
 #UserSecrets batch file
-.SetUserSecretsForAgileSprinter.bat
+SetUserSecretsForAgileSprinter.bat
