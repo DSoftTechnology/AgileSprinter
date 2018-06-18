@@ -286,3 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+#UserSecrets batch file
+.SetUserSecretsForAgileSprinter.bat
