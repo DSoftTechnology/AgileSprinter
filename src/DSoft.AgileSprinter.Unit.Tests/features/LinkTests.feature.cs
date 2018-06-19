@@ -74,12 +74,32 @@ namespace DSoft.AgileSprinter.Unit.Tests.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Links on Splash Page", exampleTags);
 #line 5
 this.ScenarioSetup(scenarioInfo);
-#line 6
-testRunner.Given("The splash page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-testRunner.When(string.Format("user clicks the {0} web link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("The splash page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.Then("The web app redirects to new uri", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("user clicks \"{0}\"", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.Then(string.Format("The web app redirects to new \"{0}\"", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Test Links on Entity Framework Page")]
+        [NUnit.Framework.TestCaseAttribute("Razor Pages", null)]
+        [NUnit.Framework.TestCaseAttribute("IIS Express", null)]
+        [NUnit.Framework.TestCaseAttribute("Rick Anderson", null)]
+        public virtual void TestLinksOnEntityFrameworkPage(string link, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Links on Entity Framework Page", exampleTags);
+#line 16
+this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.Given("The Entity Framework page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.When(string.Format("user clicks \"{0}\"", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.Then(string.Format("The web app redirects to new \"{0}\"", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
