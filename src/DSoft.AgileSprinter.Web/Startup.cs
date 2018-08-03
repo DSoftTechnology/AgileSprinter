@@ -29,6 +29,8 @@ namespace DSoft.AgileSprinter.Web
         {
             //Add database context
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //The DSoftAgileSprinter connection string is stored in the user secrets. Use "SetUserSecretsForAgileSprinter.bat" file to solve.
             services.AddDbContext<DSoft_AgileSprinterContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DSoftAgileSprinter")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
@@ -44,6 +46,8 @@ namespace DSoft.AgileSprinter.Web
                 options.Password.RequiredLength = 6; //IF YOU CHANGE THIS, YOU MUST CHANGE IT ON THE REGISTRATION PAGES ATTRIBUTES
             });
 
+            //Configuration values are supplied on each individual machine. 
+            //To set yours up, get the "SetUserSecretsForAgileSprinter.bat" file from another developer and follow the instructions
             services.AddAuthentication()
                 .AddGoogle(googleOptions =>
                 {
