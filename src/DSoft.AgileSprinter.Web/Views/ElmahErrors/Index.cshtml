@@ -1,0 +1,89 @@
+﻿@model IEnumerable<DSoft.AgileSprinter.Data.Models.ElmahError>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Application)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Host)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Source)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StatusCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeUtc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sequence)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AllXml)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Application)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Host)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeUtc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sequence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllXml)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ErrorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ErrorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ErrorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

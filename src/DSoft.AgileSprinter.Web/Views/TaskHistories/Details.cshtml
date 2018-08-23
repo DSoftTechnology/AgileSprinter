@@ -1,0 +1,78 @@
+﻿@model DSoft.AgileSprinter.Data.Models.TaskHistories
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaskHistories</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estimated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estimated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Actual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Actual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remaining)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remaining)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AssignedTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateChanged)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateChanged)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Task)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Task.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserStory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserStory.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
